@@ -22,7 +22,9 @@ class Routine{
      		System.out.println(i+"."+a.name);
      	}
     	 int day,hour,course;
-     	for(int i=0;i<4;i++) {
+    	 System.out.println("(DAY) (HOUR) (COURSE)");
+    	 System.out.println("Enter 'A' to Exit");
+     	while(in.hasNextInt()) {
      		day = in.nextInt();
      		hour = in.nextInt();
      		course = in.nextInt();

@@ -15,12 +15,10 @@ public class Main {
         char c = in.next().charAt(0);
         switch(c){
             case 'A':
-            System.out.println("Case A");
             routine.createRoutine();
             break;
             case 'B':
             routine.showRoutine();
-            System.out.println("Case B");
             break;
             case 'C':
             routine.displayList();

@@ -1,8 +1,0 @@
-SELECT courses.name as 'Courses',teachers.name as "Teachers Name" FROM courses JOIN teachers ON courses.teacher_id = teachers.id
-
-
-SELECT name as 'Teacher Name' from teachers join (select t_id,max(no) Courses from(Select courses.teacher_id t_id,count(courses.teacher_id) no from courses 
-group by teacher_id))on id=t_id
-
-
-select name from teachers where id not in (Select courses.teacher_id as 't_id' from courses)
