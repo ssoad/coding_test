@@ -1,25 +1,29 @@
+package routines;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Routine{
+import classes.Class;
+import courses.Course;
+
+public class Routine{
     ArrayList<Class> class_list = new ArrayList<Class>();
-    ArrayList<Course> courses = new ArrayList<Course>();
+    public ArrayList<Course> courses = new ArrayList<Course>();
     
     
-     void displayList() {
+     public void displayList() {
     	for(int i=0;i<this.courses.size();i++) {
     		Course a = courses.get(i);
-    		System.out.println(a.name+","+a.teacherName);
+    		System.out.println(a.getName()+","+a.getTeacherName());
     	}
     	
     }
      
      
-     void createRoutine() {
+     public void createRoutine() {
     	 Scanner in = new Scanner(System.in);
     	 for(int i=0;i<this.courses.size();i++) {
      		Course a = courses.get(i);
-     		System.out.println(i+"."+a.name);
+     		System.out.println(i+"."+a.getName());
      	}
     	 int day,hour,course;
     	 System.out.println("(DAY) (HOUR) (COURSE)");
@@ -33,11 +37,11 @@ class Routine{
      	}     	
      }
      
-     void showRoutine() {
+     public void showRoutine() {
     	 for(int i=0;i<this.class_list.size();i++) {
     		 Class a = class_list.get(i);
-    		 String course_name = courses.get(a.coursee_id).name;
-    		 System.out.println(a.day +" "+ a.hour+" "+course_name);
+    		 String course_name = courses.get(a.getCoursee_id()).getName();
+    		 System.out.println(a.getDay() +" "+ a.getHour()+" "+course_name);
     	 }
      }
 
